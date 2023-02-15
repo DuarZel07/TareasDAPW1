@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form Persona</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./logica.js"></script>
+
+</head>
+<body>
+<!--Serie Form-->
+  <div onload="Datos_series()">
+    <div class="container" id="series">
+      <h3>Formulario Series</h3>
+      <form id="datosEnviar">
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Nombre Serie:</label>
+          <input type="text" class="form-control" id="nombre_serie" placeholder="Ingresar nombre_serie" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Director Serie:</label>
+          <input type="text" class="form-control" id="director_serie" placeholder="Ingresar director_serie" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="apellido" class="form-label">Distribuidor Serie:</label>
+          <input type="text" class="form-control" id="distribuidor_serie" placeholder="Ingresar distribuidor_serie" name="apellido">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Genero Serie:</label>
+          <input type="text" class="form-control" id="Genero_serie" placeholder="Ingresar Genero_serie" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Temporadas Serie:</label>
+          <input type="text" class="form-control" id="temporadas_serie" placeholder="Ingresar temporadas_serie" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Capitulos Serie:</label>
+          <input type="text" class="form-control" id="capitulos_serie" placeholder="Ingresar capitulos_serie" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Duracion:</label>
+          <input type="text" class="form-control" id="duracion" placeholder="Ingresar duracion" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Suscripcion:</label>
+          <input type="text" class="form-control" id="suscripcion" placeholder="Ingresar suscripcion" name="nombre">
+        </div>
+        <button type="button"   
+          onclick="enviarDatos()"
+        class="btn btn-primary">Ingresar Serie</button>
+      </form>
+
+      <table  class="table" id="#reporteserie">
+
+      </table>
+  </div>
+  </div>
+
+<!--Pelicula Form-->
+<!------------------------------------------------------------------------------------>
+  <div onload="Datos_Peliculas()">
+    <div class="container" id="peliculas">
+      <h3>Formulario Peliculas</h3>
+      <form id="datosEnviar">
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Nombre Pelicula:</label>
+          <input type="text" class="form-control" id="nombre_pelicula" placeholder="Ingresar nombre_pelicula" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Director pelicula:</label>
+          <input type="text" class="form-control" id="director_pelicula" placeholder="Ingresar director_pelicula" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="apellido" class="form-label">Prouctora Pelicula:</label>
+          <input type="text" class="form-control" id="productora_pelicula" placeholder="Ingresar productora_pelicula" name="apellido">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Distribuidor Pelicula:</label>
+          <input type="text" class="form-control" id="distribuidor_pelicula" placeholder="Ingresar distribuidor_pelicula" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Genero Pelicula:</label>
+          <input type="text" class="form-control" id="genero_pelicula" placeholder="Ingresar genero_pelicula" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Duracion Pelicula:</label>
+          <input type="text" class="form-control" id="duracion_pelicula" placeholder="Ingresar duracion_pelicula" name="nombre">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="nombre" class="form-label">Suscripcion Pelicula:</label>
+          <input type="text" class="form-control" id="suscripcion" placeholder="Ingresar suscripcion" name="nombre">
+        </div>
+        <button type="button"   
+          onclick="enviarDatosPelicula()"
+        class="btn btn-primary">Ingresar Pelicula</button>
+      </form>
+      <table  class="table" id="#reportePelicula">
+      </table>
+  </div>
+</div>
+
+<!--Juegos-->
+<!------------------------------------------------------------------------------------>
+<div onload="Datos_Juego()">
+  <div class="container" id="peliculas">
+    <h3>Formulario Juegos</h3>
+    <form id="datosEnviar">
+      <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Nombre Juegos:</label>
+        <input type="text" class="form-control" id="nombre_juego" placeholder="Ingresar nombre_juego" name="nombre">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Desarrollador Juegos:</label>
+        <input type="text" class="form-control" id="desarrollador_juego" placeholder="Ingresar desarrollador_juego" name="nombre">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="apellido" class="form-label">Distribuidor Juegos:</label>
+        <input type="text" class="form-control" id="distribuirdor_juego" placeholder="Ingresar distribuirdor_juego" name="apellido">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Genero Juegos:</label>
+        <input type="text" class="form-control" id="genero_juego" placeholder="Ingresar genero_juego" name="nombre">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Suscripcion Juegos:</label>
+        <input type="text" class="form-control" id="suscripcion" placeholder="Ingresar suscripcion" name="nombre">
+      </div>
+      <button type="button"   
+        onclick="enviarDatosJuegos()"
+      class="btn btn-primary">Ingresar Juego</button>
+    </form>
+    <table  class="table" id="#reporteJuego">
+    </table>
+</div>
+</div>
+
+<!--Suscripciones-->
+<!-------------------------------------------------------------------------------------->
+<div onload="Datos_Suscripcion()">
+  <div class="container" id="peliculas">
+    <h3>Formulario Suscripcion</h3>
+    <form id="datosEnviar">
+      <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Nombre Suscripcion:</label>
+        <input type="text" class="form-control" id="nombre_suscripcion" placeholder="Ingresar nombre_suscripcion" name="nombre">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Precio Suscripcion:</label>
+        <input type="text" class="form-control" id="precio_suscripcion" placeholder="Ingresar precio_suscripcion" name="nombre">
+      </div>
+      <button type="button"   
+        onclick="enviarDatosSuscripcion()"
+      class="btn btn-primary">Ingresar Suscripcion</button>
+    </form>
+    <table  class="table" id="#reporteSuscripcion">
+    </table>
+</div>
+</div>
+
+<!--Usuarios-->
+<!--------------------------------------------------------------------------------------->
+<div onload="Datos_Usuario()">
+  <div class="container" id="peliculas">
+    <h3>Formulario Usuario</h3>
+    <form id="datosEnviar">
+      <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Nombre Usuario:</label>
+        <input type="text" class="form-control" id="nombre_usuario" placeholder="Ingresar nombre_usuario" name="nombre">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="nombre" class="form-label">Suscripciones de Usuario:</label>
+        <input type="text" class="form-control" id="suscripciones_usuario" placeholder="Ingresar suscripciones_usuario" name="nombre">
+      </div>
+      <button type="button"   
+        onclick="enviarDatosUsuario()"
+      class="btn btn-primary">Ingresar Usuario</button>
+    </form>
+    <table  class="table" id="#reporteUsuario">
+    </table>
+</div>
+</div>
+
+
+</body>
+
+</html> 
